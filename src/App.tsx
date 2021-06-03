@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Parent from "./component/parent-child/Parent";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Locale from "./other/i18n/Locale";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/i18n">
+          <Locale />
+        </Route>
+        <Route path="/parent">
+          <Parent />
+        </Route>
+        <Route path="/">
+          <div>home</div>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
