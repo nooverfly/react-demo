@@ -1,5 +1,5 @@
 import Parent from "./component/parent-child/Parent";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Locale from "./other/i18n/Locale";
 
 function App() {
